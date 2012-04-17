@@ -1,9 +1,8 @@
 [core]
     editor = subl
-    excludesfile = /Users/Bryan/.gitignore
+    excludesfile = ~/.gitignore
     pager = cat
     quotepath = false
-    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [alias]
     br = branch
@@ -33,15 +32,13 @@
     changed = green
     untracked = cyan
 
-[apply]
-    whitespace = nowarn
-[branch]
-    autosetupmerge = always
 [merge]
     summary = true
     tool = opendiff
-[rebase]
-    autosquash = true
 
 [github]
-    user = bryanveloso
+    user = lukeman
+    token = 8abb1f95b7468557242827a7ec8a4483
+[user]
+	name = Luke Hatcher
+	email = lukeman@gmail.com
