@@ -2,16 +2,31 @@
 # that the point?
 #
 
-function current_rbenv {
-    [ -f .rbenv-version ] && echo " $(rbenv version | awk '{print $1}')"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[black]%} on %{$fg[blue]%}git%{$fg[black]%}:%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}?"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}*"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+function current_venv() {
+  [ $VIRTUAL_ENV ] || return
+  echo "%{$fg[black]%} workon %{$fg[red]%}"`basename $VIRTUAL_ENV`
 }
 
-function current_venv {
-    [ $VIRTUAL_ENV ] && echo ' '`basename $VIRTUAL_ENV`
+function collapse_pwd {
+    echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-local emoticon="%(?,%{$fg[green]%}%{$reset_color%},%{$fg[red]%}❨╯°□°❩╯︵ ┻━┻  %{$reset_color%}:: )"
+PROMPT='
+%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg[green]%}$(collapse_pwd)%{$reset_color%}%{$fg_bold[green]%}%{$reset_color%}$(git_prompt_info)$(current_venv)
+%{$reset_color%}$ '
 
-PROMPT='%{$fg_bold[yellow]%}%c %{$fg_bold[blue]%}>%{$reset_color%} '
-PROMPT2='\'
-RPROMPT='${emoticon}%{$fg_bold[yellow]%}%~%{$reset_color%}%{$fg_bold[green]%}$(current_venv)%{$fg_bold[red]%}$(current_rbenv)%{$reset_color%}$(git-cwd-info.rb)'
+PROMPT='
+%{$fg[magenta]%}%n%{$fg[black]%} at %{$fg[yellow]%}%m%{$fg[black]%} in %{$fg[green]%}$(collapse_pwd)%{$reset_color%}%{$fg_bold[green]%}%{$reset_color%}$(git_prompt_info)$(current_venv)
+%{$reset_color%}$ '
+
+#PROMPT='
+#%{$fg[yellow]%}$(collapse_pwd)%{$reset_color%}$(git_prompt_info)$(current_venv)
+#%{$reset_color%}$ '
+#RPROMPT='
+#%{$fg[blue]%}%n%{$reset_color%} at %{$fg_bold[green]%}%m%{$reset_color%}'
