@@ -8,19 +8,9 @@ export MANPATH="/usr/local/share/man:/usr/X11/man:/usr/share/man"
 export NODE_PATH="/usr/local/lib/node"
 
 # Python.
-export PIP_RESPECT_VIRTUALENV="true"
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python2.7"
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS="--no-site-packages"
-export VIRTUALENVWRAPPER_HOOK_DIR="/Users/Bryan/.files/files/bin/virtualenvwrapper"
-export WORKON_HOME="/Users/Bryan/.virtualenvs"
+export VIRTUALENVWRAPPER_HOOK_DIR="$HOME/.files/files/bin/virtualenvwrapper"
+export WORKON_HOME="$HOME/.virtualenvs"
+export PIP_DOWNLOAD_CACHE=$HOME/.pip-cache
 
-# Ruby.
-export RAILS_ENV="development"
-
-# Project-specific.
-# GitHub.
-export GITHUB_ROOT="/Users/Bryan/GitHub/github"
-
-# Hello! Ranking.
-export DJANGO_SETTINGS_MODULE="modules.locals"
+# Postgres
+export PGDATA=/usr/local/pgdata
