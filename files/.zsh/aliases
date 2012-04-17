@@ -1,6 +1,5 @@
-alias browse="hub browse"
-alias mate="subl"
-alias nano="subl"
+alias git=hub
+alias cleanpyc='find . -type f -name "*.pyc" -delete'
 
 # Configuration aliases.
 alias ohmyzsh="subl ~/.oh-my-zsh"
