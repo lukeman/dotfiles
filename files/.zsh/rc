@@ -18,16 +18,11 @@ plugins=(
     git
     git-flow
     github
-    heroku
     mercurial
     osx
     pip
     python
-    rails
-    rails3
-    rbenv
     redis-cli
-    ruby
     terminalapp
 )
 
@@ -45,13 +40,12 @@ setopt append_history
 setopt inc_append_history
 bindkey -e
 
+unsetopt AUTO_MENU
+
 # Mappings for Ctrl/Option-left-arrow and Ctrl/Option-right-arrow for
 # moving across words.
 bindkey "\e\e[C" forward-word
 bindkey "\e\e[D" backward-word
-
-# Show completion on the first TAB.
-setopt menucomplete
 
 [[ -d "$HOME/.rbenv" ]] && eval "$(rbenv init -)"
 
