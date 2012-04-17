@@ -5,22 +5,15 @@
 # before our prompt.
 PS1="$_OLD_VIRTUAL_PS1"
 
-# Automatically jump to the project directory when `workon` is called.
-# <http://www.doughellmann.com/docs/virtualenvwrapper/tips.html#creating-project-work-directories>
-proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
-cd ~/Code/Revyver/$proj_name
+# Automatically set project dir to new style
+if [ ! -f $VIRTUAL_ENV/.luke-project ]; then
+    proj_name=$(echo $VIRTUAL_ENV|awk -F'/' '{print $NF}')
+    project_dir=`find $HOME/dev | grep -m 1 -e $proj_name$`
 
-# After a virtualenv is activated, `cd` will jump to the root of the project.
-# rather than ~. Explicit paths will work as intended.
-# <http://www.doughellmann.com/docs/virtualenvwrapper/tips.html#changing-the-default-behavior-of-cd>
-cd () {
-    if (( $# == 0 ))
-    then
-        builtin cd ~/Code/Revyver/$proj_name
-    else
-        builtin cd "$@"
+    if [ $project_dir ]; then
+        setvirtualenvproject $VIRTUAL_ENV $project_dir
+        echo $project_dir > $VIRTUAL_ENV/.luke-project
     fi
-}
-cd
+fi
 
 rehash
