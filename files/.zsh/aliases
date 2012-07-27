@@ -6,6 +6,10 @@ alias upgrade_dotfiles="~/.files/tools/upgrade.sh"
 alias zshconfig="subl ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 
+# postgres
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
 alias git=hub
 if type compdef >/dev/null; then
    compdef hub=git
