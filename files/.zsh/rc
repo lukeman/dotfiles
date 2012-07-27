@@ -13,16 +13,6 @@ setopt hist_ignore_dups
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/.
 plugins=(
      brew
-#     cloudapp
-#     django
-#     git
-#     git-flow
-#     github
-#     mercurial
-#     osx
-#     python
-#     redis-cli
-#     terminalapp
 )
 
 . $ZSH/oh-my-zsh.sh
