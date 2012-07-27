@@ -1,7 +1,7 @@
 [core]
     editor = subl
     excludesfile = ~/.gitignore
-    pager = cat
+    pager = more
     quotepath = false
 
 [alias]
@@ -9,32 +9,8 @@
     ci = commit
     co = checkout
     df = diff
-    lg = log -p
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     st = status
-
-[color]
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-    ui = true
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    frag = magenta bold
-    meta = yellow bold
-    new = green bold
-    old = red bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-
-[merge]
-    summary = true
-    tool = opendiff
 
 [github]
     user = lukeman
