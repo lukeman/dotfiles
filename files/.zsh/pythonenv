@@ -1,0 +1,11 @@
+# General
+export PYTHONDONTWRITEBYTECODE=1
+
+# Virtualenv
+export VIRTUALENV_DISTRIBUTE=1
+export VIRTUALENVWRAPPER_HOOK_DIR="$HOME/.files/files/bin/virtualenvwrapper"
+export WORKON_HOME="$HOME/.virtualenvs"
+
+# pip
+export PIP_INDEX_URL=https://simple.crate.io/
+export PIP_DOWNLOAD_CACHE=$HOME/.pip-cache

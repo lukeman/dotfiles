@@ -18,6 +18,7 @@ plugins=(
 . $ZSH/oh-my-zsh.sh
 . ~/.zsh/prompt
 . ~/.zsh/aliases
+. ~/.zsh/pythonenv
 
 # General history related stuff.
 HISTFILE=~/.zsh_history
