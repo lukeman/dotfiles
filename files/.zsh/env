@@ -8,9 +8,8 @@ PATH_GIT="/usr/local/share/git-core/contrib"
 PATH_PYTHON="/usr/local/share/python"
 PATH_RUBY="/usr/local/Cellar/ruby/1.9.3-p286/bin"
 PATH_NPM="/usr/local/share/npm/bin"
-PATH_PG="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
-export PATH="$PATH_PG:$PATH:$PATH_GIT:$PATH_RUBY:$PATH_NPM:$PATH_PYTHON"
+export PATH="$PATH:$PATH_GIT:$PATH_RUBY:$PATH_NPM:$PATH_PYTHON"
 
 # Node.
 export NODE_PATH="/usr/local/lib/node"
