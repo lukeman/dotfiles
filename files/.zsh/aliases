@@ -5,6 +5,7 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 alias upgrade_dotfiles="~/.files/tools/upgrade.sh"
 alias zshconfig="subl ~/.zshrc"
 alias zshreload="source ~/.zshrc"
+alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
 
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
