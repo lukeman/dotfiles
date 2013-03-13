@@ -40,6 +40,10 @@ bindkey "\e\e[D" backward-word
 
 [[ -d "$HOME/.rbenv" ]] && eval "$(rbenv init -)"
 
-if [[ -f `brew --prefix`/share/python/virtualenvwrapper.sh ]]; then
-    . `brew --prefix`/share/python/virtualenvwrapper.sh
+if [ `uname` == "Darwin" ]; then
+  if [[ -f `brew --prefix`/share/python/virtualenvwrapper.sh ]]; then
+      . `brew --prefix`/share/python/virtualenvwrapper.sh
+  fi
 fi
+
+
