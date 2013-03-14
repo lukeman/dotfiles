@@ -5,6 +5,8 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 alias upgrade_dotfiles="~/.files/tools/upgrade.sh"
 alias zshconfig="subl ~/.zshrc"
 alias zshreload="source ~/.zshrc"
+
+# OS X Specific
 if [ `uname` == "Darwin" ]; then
   alias fixopenwith="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
 fi
@@ -15,6 +17,7 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias pip="noglob pip"
 alias git=hub
+
 if type compdef >/dev/null; then
    compdef hub=git
 fi
