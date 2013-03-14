@@ -6,6 +6,9 @@ autoload -U colors
 colors
 setopt prompt_subst
 
+# Disable equals expansion
+unsetopt EQUALS
+
 # Ignore duplicates in history.
 setopt hist_ignore_dups
 
