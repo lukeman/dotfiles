@@ -9,10 +9,8 @@ setopt prompt_subst
 # Ignore duplicates in history.
 setopt hist_ignore_dups
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/.
 plugins=(
-     brew
+  brew
 )
 
 . $ZSH/oh-my-zsh.sh
@@ -30,6 +28,7 @@ setopt append_history
 setopt inc_append_history
 bindkey -e
 
+# I much prefer a bash style history function, so I disable stuff
 unsetopt AUTO_MENU
 unsetopt correct_all
 
@@ -42,7 +41,7 @@ bindkey "\e\e[D" backward-word
 
 if [ `uname` == "Darwin" ]; then
   if [[ -f `brew --prefix`/share/python/virtualenvwrapper.sh ]]; then
-      . `brew --prefix`/share/python/virtualenvwrapper.sh
+    . `brew --prefix`/share/python/virtualenvwrapper.sh
   fi
 fi
 
