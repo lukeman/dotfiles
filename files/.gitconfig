@@ -1,21 +1,10 @@
+[user]
+    name = Luke Hatcher
+    email = lukeman@gmail.com
+
 [core]
-    editor = subl
     excludesfile = ~/.gitignore
-    pager = more
-    quotepath = false
 
 [alias]
-    br = branch
-    ci = commit
-    co = checkout
-    df = diff
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    st = status
     subtree = !/usr/local/share/git-core/contrib/subtree/git-subtree.sh
-
-[github]
-    user = lukeman
-    token = 8abb1f95b7468557242827a7ec8a4483
-[user]
-	name = Luke Hatcher
-	email = lukeman@gmail.com
