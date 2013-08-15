@@ -48,4 +48,4 @@ if [ `uname` == "Darwin" ]; then
   fi
 fi
 
-
+source /usr/local/opt/autoenv/activate.sh

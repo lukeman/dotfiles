@@ -8,6 +8,8 @@ dev.db
 local_settings.py
 *.py[co]
 
+.env
+
 # Packages
 *.egg
 *.egg-info
