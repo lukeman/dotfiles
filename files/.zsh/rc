@@ -13,7 +13,8 @@ unsetopt EQUALS
 setopt hist_ignore_dups
 
 plugins=(
-  brew
+  brew,
+  safe-paste
 )
 
 . $ZSH/oh-my-zsh.sh
