@@ -5,14 +5,12 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/s
 export MANPATH="/usr/local/share/man:/usr/X11/man:/usr/share/man"
 
 PATH_GIT="/usr/local/share/git-core/contrib"
-PATH_PYTHON="/usr/local/share/python"
 PATH_RUBY="/usr/local/opt/ruby/bin"
-PATH_NPM="/usr/local/share/npm/bin"
 
-export PATH="$PATH:$PATH_GIT:$PATH_RUBY:$PATH_NPM:$PATH_PYTHON"
+export PATH="$PATH:$PATH_GIT:$PATH_RUBY:$PATH_NPM"
 
 # Node.
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH="/usr/local/lib/node_modules"
 
 # Postgres
 export PGDATA=/usr/local/var/postgres
