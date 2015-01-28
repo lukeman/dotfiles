@@ -47,5 +47,3 @@ if [ `uname` == "Darwin" ]; then
     . /usr/local/bin/virtualenvwrapper.sh
   fi
 fi
-
-source /usr/local/opt/autoenv/activate.sh
