@@ -24,3 +24,9 @@ alias git=hub
 if type compdef >/dev/null; then
    compdef hub=git
 fi
+
+# shortcuts
+alias h=history
+
+# hgrep - grep your history
+alias hgrep="history | grep"
